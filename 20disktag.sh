@@ -1,4 +1,3 @@
-
 # Updates /etc/init.d/disktag which determines the names of disks attached via USB
 
 cat  <<'EOF' > /etc/init.d/disktag

@@ -1,4 +1,3 @@
-
 # Kill rsync when a USB drive is removed
 
 # Delete existing modification from file, if it exists
