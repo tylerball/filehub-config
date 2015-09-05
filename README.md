@@ -1,3 +1,39 @@
+## RAVpower WD02 modifications ##
+
+When I had purchased a WD02, I quickly found that it wouldn't be
+safe to operate in a public network.
+There was a Wiki page "**Securing your RavPower Filehub RP-WD01**" on
+http://www.isartor.org, and soon thereafter I found
+https://github.com/digidem/filehub-config, which was the starting
+point for my own modifications.
+
+What I did:
+   * add prefix numbers for proper ordering of snippets
+   * disable part of the snippets (mainly because I don't understand them)
+   * change makefile to make use of snippet numbering, and add comments to show "where this part came from"
+   * add a new ntp.cfg for use in Europe
+   * use `/.internal/donottouch/` instead of `/monitoreo/no_tocar/`
+   * debug, and change the firewall code, and the swap code
+   * add logging (write all output next to the script)
+   * Add a `ChangePassword.sh` script that syncs encrypted passwords in multiple places (to be run in a `telnet` session)
+
+This has been tested with firmwares up to `2.000.014`, later fw versions may have telnetd disabled (or worse).
+
+Changes have been submitted to the original author but not incorporated so far. That's why there's this fork now.
+
+Future plans:
+   * support newer fw releases (when detailed info is available)
+      * including patching the `/etc/passwd` (set `root` shell to `/bin/sh`)
+   * work for WD01 and WD03 (and perhaps future hardware) - need detailed info
+   * think about supporting a USB 3G modem (???)
+   * ... (suggestions welcome)
+
+---
+
+The original README follows:
+
+---
+
 RAVPower Automation
 ===================
 

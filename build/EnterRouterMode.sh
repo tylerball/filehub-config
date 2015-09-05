@@ -13,6 +13,8 @@ echo Running $0 from `pwd` >  $0.out
 #/bin/sh -x <<'EOSCR' >> $0.out 2>&1
 /bin/sh    <<'EOSCR' >> $0.out 2>&1
 # ------------------------------------- #
+
+export ERM_ROOT=`dirname $0`
 echo -- ----------------- finished module 01prefix.sh
 
 echo -- ----------------- starting module 10firewall.sh
@@ -128,6 +130,25 @@ usb2/2-1/2-1.3 UsbDisk 3
 EOF
 echo -- ----------------- finished module 20disktag.sh
 
+echo -- ----------------- starting module 40rsync.sh
+# Copy rsync to the data store drive 
+
+STORE_DIR=/.internal
+CONFIG_DIR="$STORE_DIR"/donottouch
+
+if [ -z "$ERM_ROOT" ]; then
+    echo Environment ERM_ROOT unknown
+elif [ ! -f rsync ]; then
+    echo no rsync binary to copy to $CONFIG_DIR
+elif [ -f $CONFIG_DIR/rsync ]; then
+    echo rsync binary already exists in $CONFIG_DIR
+fi
+
+cp -p $ERM_ROOT/rsync $CONFIG_DIR/
+
+echo copy returned $?
+echo -- ----------------- finished module 40rsync.sh
+
 echo -- ----------------- starting module 50swap.sh
 # Add a swapfile on the data store drive 
 # (rsync needs this for large file copies)
@@ -135,8 +156,8 @@ echo -- ----------------- starting module 50swap.sh
 sed -i 's/^SWAP=.*/SWAP=swap/' /etc/firmware
 
 cat <<'EOF' > /etc/init.d/swap
-STORE_DIR=/monitoreo
-CONFIG_DIR="$STORE_DIR"/no_tocar
+STORE_DIR=/.internal
+CONFIG_DIR="$STORE_DIR"/donottouch
 rm -f /tmp/swapinfo
 
 echo "Running $0" > /tmp/swapinfo

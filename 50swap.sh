@@ -4,8 +4,8 @@
 sed -i 's/^SWAP=.*/SWAP=swap/' /etc/firmware
 
 cat <<'EOF' > /etc/init.d/swap
-STORE_DIR=/monitoreo
-CONFIG_DIR="$STORE_DIR"/no_tocar
+STORE_DIR=/.internal
+CONFIG_DIR="$STORE_DIR"/donottouch
 rm -f /tmp/swapinfo
 
 echo "Running $0" > /tmp/swapinfo

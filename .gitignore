@@ -1,4 +1,2 @@
-*changepasswd.sh*
-filehub
-build/*
-OFF/*
+build/*.sh
+OFF/

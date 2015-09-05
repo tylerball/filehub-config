@@ -14,8 +14,8 @@ if [ -e /tmp/backup.pid ]; then
 fi
 
 # Turn off swap if the store drive is removed
-STORE_DIR=/monitoreo
-CONFIG_DIR="$STORE_DIR"/no_tocar
+STORE_DIR=/.internal
+CONFIG_DIR="$STORE_DIR"/donottouch
 
 # Check if a USB drive is attached which is initialize for storing monitoring data
 check_storedrive() {
