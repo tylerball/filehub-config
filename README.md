@@ -39,7 +39,13 @@ Changes have been submitted to the original author but not incorporated so far. 
 
 ** This is based on a couple of tools which may be malfunctioning, please check yourself.**
 
-WD02 2.000.020 vs 2.000.014:
+#### WD01 ####
+
+   * __anyone?__
+
+#### WD02 ####
+
+#####WD02 2.000.020 vs 2.000.014:#####
    * implements some firewall features (and even has `-m state --state RELATED,ESTABLISHED`)
       * this possibly makes the 10firewall.sh snippet obsolete (anyone can confirm?)
       * not sure whether the setting persists over dis-/reconnect of WAN port
@@ -52,11 +58,14 @@ WD02 2.000.020 vs 2.000.014:
       * it might make sense to modify `/etc/init.d/opentelnet.sh` (or restore from .014)
    * NTP client now uses up to 4 servers (in `/etc/ntp/ntp.cfg`, separated by `:`)
 
-WD02 2.000.014 vs 2.000.002:
+#####WD02 2.000.014 vs 2.000.002:#####
    * `/etc/telnetflag` was introduced, but handled in `/etc/initsh` to enable `root` shells
    * `telnetd` started by `/etc/rc.d/rc` if no file `/etc/checktelnetflag` or if file `/etc/telnetflag`
    * removed file `/etc/update/update.cfg` referring to IP 114.112.95.106:80, used by `/usr/sbin/au`
 
+#### WD03 ####
+
+   * __anyone?__
 
 ---
 
