@@ -8,3 +8,5 @@ echo Running $0 from `pwd` >  $0.out
 #/bin/sh -x <<'EOSCR' >> $0.out 2>&1
 /bin/sh    <<'EOSCR' >> $0.out 2>&1
 # ------------------------------------- #
+
+export ERM_ROOT=`dirname $0`
