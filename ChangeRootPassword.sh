@@ -42,8 +42,9 @@ echo encrypted password: $ENCPASS
 OLDPASS=`awk -F: '/^root:/{print $2}' /etc/passwd`
 echo overwriting old password: $OLDPASS
 cp -p /etc/passwd /etc/passwd-
+# 20150905: change shell to /bin/sh (fw .020 and up)
 awk -F: -vPASS="$ENCPASS" \
-    '{if(/^root:/){$2=PASS;}printf("%s:%s:%s:%s:%s:%s:%s\n",$1,$2,$3,$4,$5,$6,$7)}' \
+    '{if(/^root:/){$2=PASS;$7="/bin/sh"}printf("%s:%s:%s:%s:%s:%s:%s\n",$1,$2,$3,$4,$5,$6,$7)}' \
     /etc/passwd- > /etc/passwd
 
 echo post-change:
