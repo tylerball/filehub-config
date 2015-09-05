@@ -9,12 +9,13 @@
 
 # Delete existing modification from file, if it exists
 sed -i '/#START_MOD/,/#END_MOD/d' /etc/rc.local
+sed -i '/setting firewall/d'      /etc/rc.local
 sed -i '/#START_MOD/,/#END_MOD/d' /etc/init.d/control.sh
 
 # iptables has to be run *each time* the WAN interface is reconfigured!
 cat <<'EOF' >> /etc/rc.local
-echo `date` /etc/rc.local setting firewall
 #START_MOD
+echo `date` /etc/rc.local setting firewall
 /etc/init.d/control.sh
 #END_MOD
 EOF
@@ -29,11 +30,18 @@ echo `date` WAN interface: ${wan_if} >> /tmp/firewall
 for ip4if in ${wan_if}
 do
     echo Add iptables entries for, and disable ipv6 on ${ip4if}
-    # Drop all tcp traffic incoming on ip4if
-    /bin/iptables -D INPUT -p tcp -i ${ip4if} -j DROP 2> /dev/null
+    /bin/iptables -F INPUT
+    # Drop all tcp traffic incoming on ip4if, except DNS and NTP
+    /bin/iptables -A INPUT -p tcp -i ${ip4if} --sport  53 -j ACCEPT
+    /bin/iptables -A INPUT -p tcp -i ${ip4if} --dport  53 -j ACCEPT
+    /bin/iptables -A INPUT -p tcp -i ${ip4if} --sport 123 -j ACCEPT
+    /bin/iptables -A INPUT -p tcp -i ${ip4if} --dport 123 -j ACCEPT
     /bin/iptables -A INPUT -p tcp -i ${ip4if} -j DROP
-    # Drop all udp traffic incoming on ip4if
-    /bin/iptables -D INPUT -p udp -i ${ip4if} -j DROP 2> /dev/null
+    # Drop all udp traffic incoming on ip4if, except DNS and NTP
+    /bin/iptables -A INPUT -p udp -i ${ip4if} --sport  53 -j ACCEPT
+    /bin/iptables -A INPUT -p udp -i ${ip4if} --dport  53 -j ACCEPT
+    /bin/iptables -A INPUT -p udp -i ${ip4if} --sport 123 -j ACCEPT
+    /bin/iptables -A INPUT -p udp -i ${ip4if} --dport 123 -j ACCEPT
     /bin/iptables -A INPUT -p udp -i ${ip4if} -j DROP
 
     # There seems to be no way to disable_ipv6 via /proc/sys?
