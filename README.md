@@ -27,11 +27,38 @@ What I did:
    * add logging (write all output next to the script)
    * Add a `ChangePassword.sh` script that syncs encrypted passwords in multiple places (to be run in a `telnet` session)
 
-This has been tested with firmwares up to `2.000.014`, later fw versions may have telnetd disabled (or worse).
+This has been tested with firmwares up to 2.000.014, I didn't upgrade firther since later fw versions may have telnetd disabled (or worse).
 
 If you have a copy of previous firmware versions for WD01, WD02 or WD03, please contact me.
 
 Changes have been submitted to the original author but not incorporated so far. That's why there's this fork now.
+
+---
+
+### Findings about firmware upgrades ###
+
+** This is based on a couple of tools which may be malfunctioning, please check yourself.**
+
+WD02 2.000.020 vs 2.000.014:
+   * implements some firewall features (and even has `-m state --state RELATED,ESTABLISHED`)
+      * this possibly makes the 10firewall.sh snippet obsolete (anyone can confirm?)
+      * not sure whether the setting persists over dis-/reconnect of WAN port
+      * although the code looks like there's a bug in `/sbin/netinit.sh`...
+   * `root` shell is now `/sbin/nologin` instead of `/bin/sh`
+      * `ChangeRootPassword.sh` fixes this
+   * apparently, *removal* of a file `/etc/telnetflag` will enable a `telnetd` *once* (file will be back)
+      * this may be true on first start
+      * separate set of passwords in `/etc/telnet{passwd,shadow}` but unused
+      * it might make sense to modify `/etc/init.d/opentelnet.sh` (or restore from .014)
+   * NTP client now uses up to 4 servers (in `/etc/ntp/ntp.cfg`, separated by `:`)
+
+WD02 2.000.014 vs 2.000.002:
+   * `/etc/telnetflag` was introduced, but handled in `/etc/initsh` to enable `root` shells
+   * `telnetd` started by `/etc/rc.d/rc` if no file `/etc/checktelnetflag` or if file `/etc/telnetflag`
+   * removed file `/etc/update/update.cfg` referring to IP 114.112.95.106:80, used by `/usr/sbin/au`
+
+
+---
 
 Future plans:
    * support newer fw releases (when detailed info is available)
