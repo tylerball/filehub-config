@@ -1,15 +1,25 @@
 ## RAVpower WD02 modifications ##
 
-When I had purchased a WD02, I quickly found that it wouldn't be
-safe to operate in a public network.
-There was a Wiki page "**Securing your RavPower Filehub RP-WD01**" on
-http://www.isartor.org, and soon thereafter I found
-https://github.com/digidem/filehub-config, which was the starting
+When I had purchased a [http://www.ravpower.com/catalog/product/search/filehub](RAVPower FileHub)
+[http://www.ravpower.com/rp-wd02-filehub-6000mah-power-bank-black.html](WD02), I quickly found that it wouldn't be
+safe to operate in a public network, with lots of open ports, `telnet` being quite prominent.
+
+There was a [https://web.archive.org/web/20141112135713/http://www.isartor.org/wiki/Securing_your_RavPower_Filehub_RP-WD01](Wiki page "**Securing your RavPower Filehub RP-WD01**" on
+http://www.isartor.org), and soon thereafter I found
+[https://github.com/digidem/filehub-config](the original `filehub-config`), which was the starting
 point for my own modifications.
+
+I found that (on my WD02 - which is somewhat different from the WD01, details to be investigated)
+some of the code snippets didn't work, and that they were combined in "some" order:
+   * the name of the ethernet interface was wrong (that seems to be one of those differences)
+   * the firewall would not be modified if the uplink was enabled/disabled
+   * there was no IPv6 support
+   * something didn't work with swap
+   * a few snippets I didn't (and still don't) understand
 
 What I did:
    * add prefix numbers for proper ordering of snippets
-   * disable part of the snippets (mainly because I don't understand them)
+   * disable part of the snippets
    * change makefile to make use of snippet numbering, and add comments to show "where this part came from"
    * add a new ntp.cfg for use in Europe
    * use `/.internal/donottouch/` instead of `/monitoreo/no_tocar/`
@@ -18,6 +28,8 @@ What I did:
    * Add a `ChangePassword.sh` script that syncs encrypted passwords in multiple places (to be run in a `telnet` session)
 
 This has been tested with firmwares up to `2.000.014`, later fw versions may have telnetd disabled (or worse).
+
+If you have a copy of previous firmware versions for WD01, WD02 or WD03, please contact me.
 
 Changes have been submitted to the original author but not incorporated so far. That's why there's this fork now.
 
