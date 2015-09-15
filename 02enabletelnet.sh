@@ -4,15 +4,15 @@
 
 if [ -f /etc/init.d/opentelnet.sh ]; then
     echo remove opentelnet script
-    rm -f /etc/init.d/opentelnet.sh
+    mv -f /etc/init.d/opentelnet.sh /etc/init.d/opentelnet.sh.OFF
 fi
 if [ -f /etc/telnetflag ]; then
     echo remove telnetflag
-    rm -f /etc/telnetflag
+    mv -f /etc/telnetflag /etc/telnetflag.OFF
 fi
 if [ -f /etc/checktelnetflag ]; then
     echo remove checktelnetflag
-    rm -f /etc/checktelnetflag
+    mv -f /etc/checktelnetflag /etc/checktelnetflag.OFF
 fi
 echo enable root shell
 sed -i "s|:/root:/sbin/nologin|:/root:/bin/sh|" /etc/passwd
