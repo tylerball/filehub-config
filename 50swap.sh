@@ -72,3 +72,4 @@ free
 echo swap log:
 cat /tmp/swapinfo
 }
+fi
