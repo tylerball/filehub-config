@@ -16,3 +16,5 @@ if [ -f /etc/checktelnetflag ]; then
 fi
 echo enable root shell
 sed -i "s|:/root:/sbin/nologin|:/root:/bin/sh|" /etc/passwd
+#echo enable guest/admin shell
+#sed -i "s|:/bin/sh-new-test|:/bin/sh|" /etc/passwd
