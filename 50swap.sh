@@ -19,7 +19,9 @@ cat <<'EOF' > /etc/init.d/swap
 # Swap initialization on external medium
 #rm -f /tmp/swapinfo
 echo "Running $0" > /tmp/swapinfo
-while read device mountpoint fstype remainder; do
+grep '^/dev/' /proc/mounts \
+| while read device mountpoint fstype remainder
+do
     echo "Checking $device at $mountpoint"
     if [ ${device:0:7} == "/dev/sd" -a -e "$mountpoint/.vst" ]
     then
@@ -46,7 +48,8 @@ while read device mountpoint fstype remainder; do
             fi
             sync
         fi
-        file "$swapfile"
+        # no "file" command, no way to guess whether already initialized
+        #file "$swapfile"
         # create swapfile signature
         mkswap "$swapfile"
         swapon "$swapfile"
@@ -56,10 +59,10 @@ while read device mountpoint fstype remainder; do
             rm -f "$swapfile"
             continue
         fi
-        echo "Swap activated on $swapfile ($fstype)"
+        echo "Swap activated on $swapfile"
         exit 0
     fi
-done < /proc/mounts >> /tmp/swapinfo 2>&1
+done >> /tmp/swapinfo 2>&1
 exit 0
 EOF
 # Make executable, and run right now to create and test
