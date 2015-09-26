@@ -78,8 +78,9 @@ a lot, this will perhaps never happen anymore.
 
 #### Known bugs ####
 
-   * "minidlna" process (writing to `/data/UsbDisk1/Volume1/.vst/i4dlna/i4dlna.db`) isn't properly ended, leaving an unclean fs
+   * `minidlna` process (writing to `/data/UsbDisk1/Volume1/.vst/i4dlna/i4dlna.db`) isn't properly ended, leaving an unclean fs
       * address by adding a `/etc/rc.d/rc[06].d/K83minidlna` script?
+   * `/sbin/shutdown h` invokes `hdparm -a /dev/sda` - why?
    * ...
 
 ---
