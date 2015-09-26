@@ -25,6 +25,8 @@ What I did:
    * debug, and change the firewall code, and the swap code
    * add logging (write all output next to the script)
    * patch /etc/*passwd to re-allow root logins
+   * LEDs blink while `EnterRouterMode.sh` script is run - works for my WD02, need feedback for other devices
+      * (In `telnet` console, run `/usr/sbin/pioctl {internet,status,wifi} {2,3}` - what happens?)
    * Add a `ChangePassword.sh` script that syncs encrypted passwords in multiple places (to be run in a `telnet` session)
 
 This has been tested with firmwares up to 2.000.014, I didn't upgrade further yet since later fw versions may have telnetd disabled (or worse)
