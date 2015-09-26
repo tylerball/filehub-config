@@ -76,6 +76,12 @@ a lot, this will perhaps never happen anymore.
    * __anyone?__
       * seen firmwares: 2.000.016 (similar to F800 2.000.064)
 
+#### Known bugs ####
+
+   * "minidlna" process (writing to `/data/UsbDisk1/Volume1/.vst/i4dlna/i4dlna.db`) isn't properly ended, leaving an unclean fs
+      * address by adding a `/etc/rc.d/rc[06].d/K83minidlna` script?
+   * ...
+
 ---
 
 Future plans:
