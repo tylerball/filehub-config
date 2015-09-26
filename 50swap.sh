@@ -27,11 +27,11 @@ do
     then
         swapfile="$mountpoint/.vst/swapfile"
         # exit if $swapfile already in use
-        #if grep "^$swapfile\b" /proc/swaps
-        #then
-        #    echo "Already using $swapfile"
-        #    exit 0
-        #fi
+        if grep "^$swapfile\b" /proc/swaps
+        then
+            echo "Already using $swapfile"
+            exit 0
+        fi
         if [ -e "$swapfile" ]
         then
             echo "Found $swapfile"
