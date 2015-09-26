@@ -14,7 +14,13 @@ if [ -f /etc/checktelnetflag ]; then
     echo remove checktelnetflag
     mv -f /etc/checktelnetflag /etc/checktelnetflag.OFF
 fi
-echo enable root shell
-sed -i "s|:/root:/sbin/nologin|:/root:/bin/sh|" /etc/passwd
-#echo enable guest/admin shell
-#sed -i "s|:/bin/sh-new.*|:/bin/sh|" /etc/*passwd
+if grep -q 'root:/sbin/nologin' /etc/passwd
+then
+    echo enable root shell
+    sed -i "s|:/root:/sbin/nologin|:/root:/bin/sh|" /etc/passwd
+fi
+#if grep -q '/bin/sh-new' /etc/*passwd
+#then
+#    enable guest/admin shell
+#    sed -i "s|:/bin/sh-new.*|:/bin/sh|" /etc/*passwd
+#fi
