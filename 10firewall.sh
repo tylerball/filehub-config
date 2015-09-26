@@ -49,7 +49,7 @@ EOF
 
 # if we have state supprt for iptables, we may drop everything
 # except responses to valid DNS and NTP requests
-if [ $STATEFUL _eq 1 ]
+if [ $STATEFUL -eq 1 ]
 then
     cat <<'EOF' >> /etc/init.d/myfirewall.sh
 iptables -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
