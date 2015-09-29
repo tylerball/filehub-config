@@ -78,6 +78,19 @@ a lot, this will perhaps never happen anymore.
    * __anyone?__
       * seen firmwares: 2.000.016 (similar to F800 2.000.064)
 
+---
+
+#### Other makers ####
+
+   * [https://forum.openwrt.org/viewtopic.php?pid=259413#p259413](this forum article contains a quite comprehensive list)
+
+#### Other resources ####
+
+   * http://wiki.openwrt.org/toh/ravpower/rp-wd02, https://forum.openwrt.org/viewtopic.php?id=54861
+   * http://wiki.openwrt.org/toh/hootoo/tripmate-nano, https://forum.openwrt.org/viewtopic.php?id=53014
+
+---
+
 #### Known bugs ####
 
    * `minidlna` process (writing to `/data/UsbDisk1/Volume1/.vst/i4dlna/i4dlna.db`) isn't properly ended, leaving an unclean fs
