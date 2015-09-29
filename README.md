@@ -42,7 +42,11 @@ a lot, this will perhaps never happen anymore.
 
 ### Findings about firmware upgrades ###
 
-Split off into [a separate page](doc/Firmware.md).
+Split off into [a separate page](doc/Firmwares.md).
+
+### Further reading ###
+
+Some [links](doc/Links.md).
 
 ---
 
