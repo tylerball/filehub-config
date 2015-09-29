@@ -1,0 +1,487 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" dir="ltr">
+<head>
+
+
+<script type="text/javascript" src="/static/js/analytics.js"></script>
+<script type="text/javascript">archive_analytics.values.server_name="wwwb-app14.us.archive.org";archive_analytics.values.server_ms=136;</script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+<title>Securing your RavPower Filehub RP-WD01 - iSartor Wiki</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="MediaWiki 1.16.2" />
+<link rel="shortcut icon" href="/web/20141112135713im_/http://www.isartor.org/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="iSartor Wiki (en)" />
+<link rel="alternate" type="application/atom+xml" title="iSartor Wiki Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="stylesheet" href="/web/20141112135713cs_/http://www.isartor.org/w/skins/common/shared.css?270" media="screen" />
+<link rel="stylesheet" href="/web/20141112135713cs_/http://www.isartor.org/w/skins/common/commonPrint.css?270" media="print" />
+<link rel="stylesheet" href="/web/20141112135713cs_/http://www.isartor.org/w/skins/monobook/main.css?270" media="screen" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/w/skins/monobook/IE50Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/w/skins/monobook/IE55Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/w/skins/monobook/IE60Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/w/skins/monobook/IE70Fixes.css?270" media="screen" /><![endif]-->
+<link rel="stylesheet" href="/web/20141112135713cs_/http://www.isartor.org/w/index.php?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" />
+<link rel="stylesheet" href="/web/20141112135713cs_/http://www.isartor.org/w/index.php?title=MediaWiki:Print.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" media="print" />
+<link rel="stylesheet" href="/web/20141112135713cs_/http://www.isartor.org/w/index.php?title=MediaWiki:Monobook.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" />
+<link rel="stylesheet" href="/web/20141112135713cs_/http://www.isartor.org/w/index.php?title=-&amp;action=raw&amp;maxage=18000&amp;gen=css" />
+<script>
+var skin="monobook",
+stylepath="/w/skins",
+wgUrlProtocols="http\\:\\/\\/|https\\:\\/\\/|ftp\\:\\/\\/|irc\\:\\/\\/|gopher\\:\\/\\/|telnet\\:\\/\\/|nntp\\:\\/\\/|worldwind\\:\\/\\/|mailto\\:|news\\:|svn\\:\\/\\/",
+wgArticlePath="/wiki/$1",
+wgScriptPath="/w",
+wgScriptExtension=".php",
+wgScript="/w/index.php",
+wgVariantArticlePath=false,
+wgActionPaths={},
+wgServer="/web/20141112135713/http://www.isartor.org",
+wgCanonicalNamespace="",
+wgCanonicalSpecialPageName=false,
+wgNamespaceNumber=0,
+wgPageName="Securing_your_RavPower_Filehub_RP-WD01",
+wgTitle="Securing your RavPower Filehub RP-WD01",
+wgAction="view",
+wgArticleId=142,
+wgIsArticle=true,
+wgUserName=null,
+wgUserGroups=null,
+wgUserLanguage="en",
+wgContentLanguage="en",
+wgBreakFrames=false,
+wgCurRevisionId=1045,
+wgVersion="1.16.2",
+wgEnableAPI=true,
+wgEnableWriteAPI=true,
+wgSeparatorTransformTable=["", ""],
+wgDigitTransformTable=["", ""],
+wgMainPageTitle="Main Page",
+wgFormattedNamespaces={"-2": "Media", "-1": "Special", "0": "", "1": "Talk", "2": "User", "3": "User talk", "4": "iSartor Wiki", "5": "iSartor Wiki talk", "6": "File", "7": "File talk", "8": "MediaWiki", "9": "MediaWiki talk", "10": "Template", "11": "Template talk", "12": "Help", "13": "Help talk", "14": "Category", "15": "Category talk"},
+wgNamespaceIds={"media": -2, "special": -1, "": 0, "talk": 1, "user": 2, "user_talk": 3, "isartor_wiki": 4, "isartor_wiki_talk": 5, "file": 6, "file_talk": 7, "mediawiki": 8, "mediawiki_talk": 9, "template": 10, "template_talk": 11, "help": 12, "help_talk": 13, "category": 14, "category_talk": 15, "image": 6, "image_talk": 7},
+wgSiteName="iSartor Wiki",
+wgCategories=[],
+wgRestrictionEdit=[],
+wgRestrictionMove=[];
+</script><script src="/web/20141112135713js_/http://www.isartor.org/w/skins/common/wikibits.js?270"></script>
+<script src="/web/20141112135713js_/http://www.isartor.org/w/skins/common/ajax.js?270"></script>
+<script src="/web/20141112135713js_/http://www.isartor.org/w/index.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=monobook&amp;270"></script>
+
+</head>
+<body class="mediawiki ltr ns-0 ns-subject page-Securing_your_RavPower_Filehub_RP-WD01 skin-monobook">
+
+
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript">//<![CDATA[
+var __wm = (function(imgWidth,imgHeight,yearImgWidth,monthImgWidth){
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http://www.isartor.org/wiki/Securing_your_RavPower_Filehub_RP-WD01";
+
+var firstYear = 1996;
+var displayDay = "12";
+var displayMonth = "Nov";
+var displayYear = "2014";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+var $D=document,$=function(n){return document.getElementById(n)};
+var trackerVal,curYear = -1,curMonth = -1;
+var yearTracker,monthTracker;
+function showTrackers(val) {
+  if (val===trackerVal) return;
+  var $ipp=$("wm-ipp");
+  var $y=$("displayYearEl"),$m=$("displayMonthEl"),$d=$("displayDayEl");
+  if (val) {
+    $ipp.className="hi";
+  } else {
+    $ipp.className="";
+    $y.innerHTML=displayYear;$m.innerHTML=displayMonth;$d.innerHTML=displayDay;
+  }
+  yearTracker.style.display=val?"inline":"none";
+  monthTracker.style.display=val?"inline":"none";
+  trackerVal = val;
+}
+function trackMouseMove(event,element) {
+  var eventX = getEventX(event);
+  var elementX = getElementX(element);
+  var xOff = Math.min(Math.max(0, eventX - elementX),imgWidth);
+  var monthOff = xOff % yearImgWidth;
+
+  var year = Math.floor(xOff / yearImgWidth);
+  var monthOfYear = Math.min(11,Math.floor(monthOff / monthImgWidth));
+  // 1 extra border pixel at the left edge of the year:
+  var month = (year * 12) + monthOfYear;
+  var day = monthOff % 2==1?15:1;
+  var dateString = zeroPad(year + firstYear) + zeroPad(monthOfYear+1,2) +
+    zeroPad(day,2) + "000000";
+
+  $("displayYearEl").innerHTML=year+firstYear;
+  $("displayMonthEl").innerHTML=prettyMonths[monthOfYear];
+  // looks too jarring when it changes..
+  //$("displayDayEl").innerHTML=zeroPad(day,2);
+  var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+  $("wm-graph-anchor").href=url;
+
+  if(curYear != year) {
+    var yrOff = year * yearImgWidth;
+    yearTracker.style.left = yrOff + "px";
+    curYear = year;
+  }
+  if(curMonth != month) {
+    var mtOff = year + (month * monthImgWidth) + 1;
+    monthTracker.style.left = mtOff + "px";
+    curMonth = month;
+  }
+}
+function hideToolbar() {
+  $("wm-ipp").style.display="none";
+}
+function bootstrap() {
+  var $spk=$("wm-ipp-sparkline");
+  yearTracker=$D.createElement('div');
+  yearTracker.className='yt';
+  with(yearTracker.style){
+    display='none';width=yearImgWidth+"px";height=imgHeight+"px";
+  }
+  monthTracker=$D.createElement('div');
+  monthTracker.className='mt';
+  with(monthTracker.style){
+    display='none';width=monthImgWidth+"px";height=imgHeight+"px";
+  }
+  $spk.appendChild(yearTracker);
+  $spk.appendChild(monthTracker);
+
+  var $ipp=$("wm-ipp");
+  $ipp&&disclaimElement($ipp);
+}
+return{st:showTrackers,mv:trackMouseMove,h:hideToolbar,bt:bootstrap};
+})(500, 27, 25, 2);//]]>
+</script>
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  min-width:800px !important;
+}
+</style>
+<div id="wm-ipp" lang="en" style="display:none;">
+
+<div style="position:fixed;left:0;top:0;width:100%!important">
+<div id="wm-ipp-inside">
+   <table style="width:100%;"><tbody><tr>
+   <td id="wm-logo">
+       <a href="/web/" title="Wayback Machine home page"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0" /></a>
+   </td>
+   <td class="c">
+       <table style="margin:0 auto;"><tbody><tr>
+       <td class="u" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb"><input type="text" name="url" id="wmtbURL" value="http://www.isartor.org/wiki/Securing_your_RavPower_Filehub_RP-WD01" style="width:400px;" onfocus="this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20141112135713" /><input type="submit" value="Go" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td class="n" rowspan="2">
+           <table><tbody>
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr class="m">
+           	<td class="b" nowrap="nowrap">
+		
+		    Oct
+		
+		</td>
+		<td class="c" id="displayMonthEl" title="You are here: 13:57:13 Nov 12, 2014">NOV</td>
+		<td class="f" nowrap="nowrap">
+		
+		    Dec
+		
+                </td>
+	    </tr>
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr class="d">
+               <td class="b" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_prv_off.png" alt="Previous capture" width="14" height="16" border="0" />
+               
+               </td>
+               <td class="c" id="displayDayEl" style="width:34px;font-size:24px;" title="You are here: 13:57:13 Nov 12, 2014">12</td>
+	       <td class="f" nowrap="nowrap">
+               
+                   <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+               
+	       </td>
+           </tr>
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr class="y">
+	       <td class="b" nowrap="nowrap">
+               
+                   2013
+               
+               </td>
+               <td class="c" id="displayYearEl" title="You are here: 13:57:13 Nov 12, 2014">2014</td>
+	       <td class="f" nowrap="nowrap">
+               
+                   2015
+               
+	       </td>
+           </tr>
+           </tbody></table>
+       </td>
+       </tr>
+       <tr>
+       <td class="s">
+           <a class="t" href="/web/20141112135713*/http://www.isartor.org/wiki/Securing_your_RavPower_Filehub_RP-WD01" title="See a list of every capture for this URL">1 captures</a>
+           <div class="r" title="Timespan for captures of this URL">12 Nov 14 - 12 Nov 14</div>
+       </td>
+       <td class="k">
+       <a href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" title="Explore captures for this URL">
+	 <img id="sparklineImgId" alt="sparklines"
+		 onmouseover="__wm.st(1)" onmouseout="__wm.st(0)"
+		 onmousemove="__wm.mv(event,this)"
+		 width="500"
+		 height="27"
+		 border="0"
+		 src="/web/jsp/graph.jsp?graphdata=500_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:000000000000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:000000000000_2011:-1:000000000000_2012:-1:000000000000_2013:-1:000000000000_2014:10:000000000010_2015:-1:000000000000" />
+       </div>
+       </a>
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td class="r">
+       <a href="#close" onclick="__wm.h();return false;" style="background-image:url(/static/images/toolbar/wm_tb_close.png);top:5px;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="background-image:url(/static/images/toolbar/wm_tb_help.png);bottom:5px;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+</div>
+</div>
+</div>
+<script type="text/javascript">__wm.bt();</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id="globalWrapper">
+<div id="column-content"><div id="content" >
+	<a id="top"></a>
+	
+	<h1 id="firstHeading" class="firstHeading">Securing your RavPower Filehub RP-WD01</h1>
+	<div id="bodyContent">
+		<h3 id="siteSub">From iSartor Wiki</h3>
+		<div id="contentSub"></div>
+		<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>
+		<!-- start content -->
+<p>Got myself a RavPower FileHub WD01 for the following reasons:
+</p>
+<ul><li> Able to share a hotel wifi connection (pay only once and connect all your wifi devices)
+</li><li> Able to stream photos and videos from the filehub to PC/Phone/Tablet (Ability to add SDcard/USBstorage to filehub which is shared to connected devices through samba or AirStor Android/IOS App)
+</li><li> Next to that you can also use it as a powerbank, as it has an integrated 3000maH battery.
+</li></ul>
+<p>Playing around with the filehub I noticed that this thing does what it say it does, however the builders didn't think much about securing the device.
+</p><p>The filehub has a telnet daemon running which listens on ALL interfaces. When you connect the filehub to a foreign wifi network, this means that the telnet daemon is exposed to all devices on the network to which you are connecting (the foreign network).
+Next to that, the "root" password (20080826) is freely avaiable on the internet (found it in multiple forum topics), so it is not very difficult for any "hacker" (or curious individual with some technical knowhow), on the foreign network, to access your device and even get root access. Of course this also means that that "hacker" is able to access all your storage devices which you have attached to the filehub, and even modify or delete that data, which in my opinion should raise some red flags.
+</p><p>Putting in a little effort I was able to make the filehub a bit more secure, by:
+</p>
+<ul><li> Changing the root password
+</li><li> Do some basic IPv4 filtering
+</li><li> Disabling IPv6, as a firewall for IPv6 is not installed on the device.
+</li></ul>
+<p>The main thing here is making your changes on the squashfs filesystem and then committing those changes to flash, which took a little time to figure that out.
+</p>
+<h2> <span class="mw-headline" id="Change_the_root_password"> Change the root password </span></h2>
+<ul><li> Connect a computer to the filehub's hotspot
+</li><li> Telnet to 10.10.10.254 (default IP)
+</li><li> Login: root
+</li><li> Passwd: 20080826
+</li></ul>
+<ul><li> Issue the command:
+</li></ul>
+<pre>
+# passwd
+</pre>
+<ul><li> Choose a new password
+</li></ul>
+<ul><li> Commit changes to flash, by issuing the following command:
+</li></ul>
+<pre>
+# /usr/sbin/etc_tools p
+</pre>
+<p>Now the root password is changed and committed to flash, so it stays changed after reboots.
+</p>
+<h2> <span class="mw-headline" id="Basic_IP_Filtering"> Basic IP Filtering </span></h2>
+<p>You should already be a lot saver by changing the root password. However I don't want the telnet daemon to be accessible from foreign networks. Better yet, I don't even want my samba shares exposed to those foreign networks.
+So I created my filter rules quite basic, but effective:
+</p>
+<ul><li> Connect a computer to the filehub's hotspot
+</li><li> Telnet to 10.10.10.254 (default IP)
+</li><li> Login: root
+</li><li> Passwd: [the_password_you_set]
+</li></ul>
+<p>The file "/etc/rc.local" is executed after all services has started. So you need to edit this file. The only text editor I could find on the system was "vi". So if you don't know how "vi" works, you should read up on this first.
+</p>
+<ul><li> Edit the file: /etc/rc.local by issuing the following command:
+</li></ul>
+<pre>
+# vi /etc/rc.local
+</pre>
+<ul><li> At the end of this file, append the following:
+</li></ul>
+<pre>
+iface=&quot;apcli0&quot;                                    
+
+# Drop all tcp traffic incomming on iface
+/bin/iptables -A INPUT -p tcp -i ${iface} -j DROP
+# Drop all udp traffic incomming on iface
+/bin/iptables -A INPUT -p udp -i ${iface} -j DROP                                         
+                     
+# Fetch IPv6 address on iface                                        
+ipv6_addr=`ifconfig ${iface} | grep inet6 | awk {'print $3'}`
+                           
+# No IPv6 filter is installed, so remove IPv6 address on iface
+if [ &quot;${ipv6_addr}&quot;&nbsp;!= &quot;&quot; ]; then
+  /bin/ip -6 addr del &quot;${ipv6_addr}&quot; dev ${iface}
+fi
+</pre>
+<ul><li> Save the file, and quit "vi"
+</li></ul>
+<ul><li> Commit changes to flash, by issuing the following command:
+</li></ul>
+<pre>
+# /usr/sbin/etc_tools p
+</pre>
+<ul><li> Restart the device.
+</li></ul>
+<p>Now you added some very basic IP filtering. Whatever you do, watch out with filtering icmp traffic, as the filehub uses icmp to check for connectivity on the foreign network.
+</p><p>Doing an nmap of the IP address exposed on the foreign network (running from a host on foreign network):
+</p>
+<pre>
+# nmap -P0 [IP_ADDR_ON_FOREIGN_NET]
+
+Starting Nmap 5.21 ( http://nmap.org ) at 2014-03-14 21:23 CET
+
+Nmap scan report for [IP_ADDR_ON_FOREIGN_NET]
+Host is up (0.082s latency).
+All 1000 scanned ports on [IP_ADDR_ON_FOREIGN_NET] are filtered
+</pre>
+<p>On a host on the foreign network I also tested with adding a route to 10.10.10.0/24 to gateway [IP_ADDR_ON_FOREIGN_NET]. As 10.10.10.0/24 is a routable network, this should also be tested. After adding the route I could indeed ping the internal IP of the filehub:
+</p>
+<pre>
+# ping 10.10.10.254
+PING 10.10.10.254 (10.10.10.254) 56(84) bytes of data.
+64 bytes from 10.10.10.254: icmp_req=1 ttl=64 time=1.67 ms
+</pre>
+<p>But nmap still was not able to see any exposed ports from the foreign network:
+</p>
+<pre>
+# nmap -P0 10.10.10.254
+
+Starting Nmap 5.21 ( http://nmap.org ) at 2014-03-14 21:25 CET
+
+Nmap scan report for 10.10.10.254
+Host is up.
+All 1000 scanned ports on 10.10.10.254 are filtered
+</pre>
+<p>So now I can access the filehub when connected to the filehub's hotspot, but from the foreign network I am not able to access the filehub on tcp or udp.
+</p><p><br />
+</p>
+<h2> <span class="mw-headline" id="Notes"> Notes </span></h2>
+<p>Please remember that these changes need to be applied probably every time after a firmware update.
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 83/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key wikidb:pcache:idhash:142-0!1!0!!en!2!edit=0 and timestamp 20141111233711 -->
+<div class="printfooter">
+Retrieved from "<a href="/web/20141112135713/http://www.isartor.org/wiki/Securing_your_RavPower_Filehub_RP-WD01">http://www.isartor.org/wiki/Securing_your_RavPower_Filehub_RP-WD01</a>"</div>
+		<div id='catlinks' class='catlinks catlinks-allhidden'></div>		<!-- end content -->
+				<div class="visualClear"></div>
+	</div>
+</div></div>
+<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+				 <li id="ca-nstab-main" class="selected"><a href="/web/20141112135713/http://www.isartor.org/wiki/Securing_your_RavPower_Filehub_RP-WD01" title="View the content page [c]" accesskey="c">Page</a></li>
+				 <li id="ca-talk" class="new"><a href="/web/20141112135713/http://www.isartor.org/w/index.php?title=Talk:Securing_your_RavPower_Filehub_RP-WD01&amp;action=edit&amp;redlink=1" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				 <li id="ca-viewsource"><a href="/web/20141112135713/http://www.isartor.org/w/index.php?title=Securing_your_RavPower_Filehub_RP-WD01&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				 <li id="ca-history"><a href="/web/20141112135713/http://www.isartor.org/w/index.php?title=Securing_your_RavPower_Filehub_RP-WD01&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="/web/20141112135713/http://www.isartor.org/w/index.php?title=Special:UserLogin&amp;returnto=Securing_your_RavPower_Filehub_RP-WD01" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(/web/20141112135713im_/http://www.isartor.org/w/isartor-135.png);" href="/web/20141112135713/http://www.isartor.org/wiki/Main_Page" title="Visit the main page"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class='generated-sidebar portlet' id='p-navigation'>
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage-description"><a href="/web/20141112135713/http://www.isartor.org/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+				<li id="n-Linux-Stuff"><a href="/web/20141112135713/http://www.isartor.org/wiki/Linux_Main">Linux Stuff</a></li>
+				<li id="n-Solaris-Stuff"><a href="/web/20141112135713/http://www.isartor.org/wiki/Solaris_Main">Solaris Stuff</a></li>
+				<li id="n-Zarafa-Stuff"><a href="/web/20141112135713/http://www.isartor.org/wiki/Zarafa_Main">Zarafa Stuff</a></li>
+				<li id="n-OSX-Stuff"><a href="/web/20141112135713/http://www.isartor.org/wiki/OSX_Main">OSX Stuff</a></li>
+				<li id="n-Other-Stuff"><a href="/web/20141112135713/http://www.isartor.org/wiki/Other_Main">Other Stuff</a></li>
+				<li id="n-recentchanges"><a href="/web/20141112135713/http://www.isartor.org/wiki/Special:RecentChanges" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+				<li id="n-randompage"><a href="/web/20141112135713/http://www.isartor.org/wiki/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li>
+				<li id="n-Contact-page"><a href="/web/20141112135713/http://www.isartor.org/wiki/Special:Contact">Contact page</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/web/20141112135713/http://www.isartor.org/w/index.php" id="searchform">
+				<input type='hidden' name="title" value="Special:Search"/>
+				<input id="searchInput" title="Search iSartor Wiki" accesskey="f" type="search" name="search" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+			</form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="/web/20141112135713/http://www.isartor.org/wiki/Special:WhatLinksHere/Securing_your_RavPower_Filehub_RP-WD01" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="/web/20141112135713/http://www.isartor.org/wiki/Special:RecentChangesLinked/Securing_your_RavPower_Filehub_RP-WD01" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+<li id="t-specialpages"><a href="/web/20141112135713/http://www.isartor.org/wiki/Special:SpecialPages" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+				<li id="t-print"><a href="/web/20141112135713/http://www.isartor.org/w/index.php?title=Securing_your_RavPower_Filehub_RP-WD01&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>				<li id="t-permalink"><a href="/web/20141112135713/http://www.isartor.org/w/index.php?title=Securing_your_RavPower_Filehub_RP-WD01&amp;oldid=1045" title="Permanent link to this revision of the page">Permanent link</a></li>			</ul>
+		</div>
+	</div>
+</div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<div id="footer">
+	<div id="f-poweredbyico"><a href="/web/20141112135713/http://www.mediawiki.org/"><img src="/web/20141112135713im_/http://www.isartor.org/w/skins/common/images/poweredby_mediawiki_88x31.png" height="31" width="88" alt="Powered by MediaWiki" /></a></div>
+	<ul id="f-list">
+		<li id="lastmod"> This page was last modified on 14 March 2014, at 20:37.</li>
+		<li id="viewcount">This page has been accessed 2,020 times.</li>
+		<li id="privacy"><a href="/web/20141112135713/http://www.isartor.org/wiki/iSartor_Wiki:Privacy_policy" title="iSartor Wiki:Privacy policy">Privacy policy</a></li>
+		<li id="about"><a href="/web/20141112135713/http://www.isartor.org/wiki/iSartor_Wiki:About" title="iSartor Wiki:About">About iSartor Wiki</a></li>
+		<li id="disclaimer"><a href="/web/20141112135713/http://www.isartor.org/wiki/iSartor_Wiki:General_disclaimer" title="iSartor Wiki:General disclaimer">Disclaimers</a></li>
+	</ul>
+</div>
+</div>
+
+<script>if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 0.131 secs. --></body></html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 13:57:13 Nov 12, 2014 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 14:39:10 Sep 5, 2015.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
