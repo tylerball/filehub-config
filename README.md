@@ -42,7 +42,7 @@ a lot, this will perhaps never happen anymore.
 
 ### Findings about firmware upgrades ###
 
-Split off into (doc/Firmware.md)[a separate page].
+Split off into [a separate page](doc/Firmware.md).
 
 ---
 
@@ -54,4 +54,4 @@ Future plans:
 
 ---
 
-The old README is (doc/README_orig.md)[here].
+The old README is [here](doc/README_orig.md).
