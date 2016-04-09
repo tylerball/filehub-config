@@ -40,6 +40,26 @@ a lot, this will perhaps never happen anymore.
 
 ---
 
+### Usage notes ###
+
+Warning / Disclaimer:
+Although written with extreme caution, this set of scriptlets may damage your device beyond repair!
+No liability accepted by uploading this stuff.
+
+I've tested most of them on my RP-WD02 with firmware 2.000.014 installed, and found no obvious problems,
+but as always, your mileage may vary.
+
+Before using them, inspect them closely, and rename whatever you don't need, only then run "make",
+and copy the resulting EnterRouterMode.sh (in build/) to your SDcard.
+The EnterRouterMode.sh script is run once when the device is powered up, writing copious output to
+EnterRouterMode.sh.out and eventually renaming itself to EnterRouterMode.sh.off (so it won't run
+again). The device will restart! 
+
+In general, scriptlets will become no-ops if their target has already been addressed. Nevertheless,
+check the output whether your goals have been reached!
+
+---
+
 ### Findings about firmware upgrades ###
 
 Split off into [a separate page](doc/Firmwares.md).
