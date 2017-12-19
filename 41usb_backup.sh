@@ -110,7 +110,7 @@ if [ $sdcard -eq 1 -a $storedrive -eq 1 ];then
         # removing the source files once copied.
         # Uses filename and size to check for duplicates
         echo "Copying SD card to $incoming_dir" >> /tmp/usb_add_info
-        rsync -vrtm --size-only --modify-window=2 --remove-source-files --log-file /tmp/rsync_log --partial-dir "$partial_dir" --exclude ".?*" "$SD_MOUNTPOINT"/DCIM/ "$incoming_dir"
+        rsync -vrtm --size-only --modify-window=2 --log-file /tmp/rsync_log --partial-dir "$partial_dir" --exclude ".?*" "$SD_MOUNTPOINT"/DCIM/ "$incoming_dir"
         if [ $? -eq 0 ]; then
                 # Only continue if the incoming_dir is not empty
                 rmdir "$incoming_dir"
